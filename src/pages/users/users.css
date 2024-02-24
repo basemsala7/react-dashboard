@@ -1,0 +1,10 @@
+.usersComponent {
+  padding: 20px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 4px;
+  margin: 15px 0;
+}

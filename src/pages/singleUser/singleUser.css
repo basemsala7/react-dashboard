@@ -1,0 +1,57 @@
+.singleWraper {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imgWraper {
+  display: flex;
+  margin: 20px 0;
+}
+.imgWraper p {
+  align-self: center;
+  padding: 0 25px;
+}
+.info h3 {
+  padding: 15px 0;
+}
+.info {
+  border-bottom: 1px solid gray;
+  width: 50%;
+  padding: 16px 0;
+  align-self: baseline;
+}
+.imgWraper img {
+  border-radius: 25px;
+}
+.activitiesContainer {
+  padding: 10px 40px 10px 10px;
+}
+.activities {
+  border-left: 2px solid #f45b69;
+}
+
+.activities h4 {
+  padding: 15px;
+  background-color: rgba(244, 91, 104, 0.062745098);
+  margin: 35px 0;
+  position: relative;
+}
+.activities h4::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f45b69;
+  transform: translateX();
+}
+@media (max-width: 976) {
+  .info {
+    width: inherit;
+  }
+  .singleWraper {
+    justify-content: center;
+  }
+}

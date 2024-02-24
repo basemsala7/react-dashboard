@@ -1,0 +1,34 @@
+.tableWraper {
+  display: flex;
+  border-bottom: 0.5px solid gray;
+  padding: 4px;
+
+  margin: 15px 0;
+}
+.tableWraper > div {
+  padding: 16px 0;
+  width: 160px;
+  vertical-align: sub;
+  padding: 4px;
+}
+.tableWraper > div:nth-child(1) {
+  width: 50px;
+}
+.tableWraper > div:nth-child(2) {
+  width: 100px;
+}
+
+.tableWraper > div:nth-child(6) {
+  text-align: center;
+}
+.tableWraper > div:nth-child(5) {
+  text-align: center;
+}
+
+.tableWraper > div:nth-child(8) {
+  text-align: center;
+  width: 100px;
+}
+.tableWraper > div:nth-child(8) {
+  text-align: center;
+}

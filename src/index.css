@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.mainContainer {
+  display: flex;
+}
+.view {
+  /* background-color: bisque; */
+  width: 100%;
+}
+.error {
+  text-align: center;
+  margin: 50px 0;
+  color: red;
+}

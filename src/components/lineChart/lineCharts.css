@@ -1,0 +1,38 @@
+.lineChartWraper {
+  display: flex;
+  justify-content: space-around;
+}
+.linechart {
+  width: 45%;
+  align-self: center;
+  height: 100px;
+}
+.linechart p {
+  position: absolute;
+  right: 25px;
+}
+#per {
+  right: 40px;
+
+  bottom: 35px;
+}
+
+.linechart > p:nth-child(2) {
+  bottom: 16px;
+  text-align: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.titleContainer {
+  display: flex;
+}
+.titleContainer p {
+  margin-left: 8px;
+}
+.info h2 {
+  font-size: 22px;
+  padding: 32px 0;
+}
