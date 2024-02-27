@@ -51,7 +51,6 @@ const Nav = () => {
         className="linksItemWraper"
         onClick={() => {
           removeCookie("token", { path: "/", domain: "localhost" });
-          navigtae("/");
         }}
       >
         <MdLogout />
