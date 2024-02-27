@@ -2,8 +2,10 @@ import "./login.css";
 import image from "../../../public/images.png";
 import { useCookies } from "react-cookie";
 import { toast } from "react-toast";
+import { useState } from "react";
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
   const [cookies, setCookie] = useCookies(["token"]);
 
   const user = {
@@ -21,15 +23,18 @@ const Login = () => {
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
+
           body: JSON.stringify(user),
         }
       );
+      setLoading(true);
       if (!res.ok) throw Error();
       const { token } = await res.json();
       setCookie("token", token, { path: "/" });
 
       console.log(token);
     } catch (error) {
+      setLoading(false);
       console.log(error);
       const errorTosat = () => toast.error("some thing error try again");
       errorTosat();
@@ -45,6 +50,7 @@ const Login = () => {
         <input type="password" value={user.password} />
         <button onClick={loginFunction}>Login</button>
       </form>
+      {loading && <div className="loader"></div>}
     </div>
   );
 };
