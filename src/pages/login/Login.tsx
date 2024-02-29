@@ -15,6 +15,8 @@ const Login = () => {
   const loginFunction = async (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     try {
+      setLoading(true);
+
       const res = await fetch(
         "https://crazy-flannel-nightgown-ant.cyclic.app/api/login",
         {
@@ -27,7 +29,6 @@ const Login = () => {
           body: JSON.stringify(user),
         }
       );
-      setLoading(true);
       if (!res.ok) throw Error();
       const { token } = await res.json();
       setCookie("token", token, { path: "/" });
@@ -44,13 +45,17 @@ const Login = () => {
 
   return (
     <div className="loginContainer">
+      {loading && (
+        <div className="loginLoader">
+          <div className="loader" style={{ left: "48%" }}></div>
+        </div>
+      )}
       <form action="">
         <img src={image} alt="" />
         <input type="text" value={user.email} />
         <input type="password" value={user.password} />
         <button onClick={loginFunction}>Login</button>
       </form>
-      {loading && <div className="loader"></div>}
     </div>
   );
 };
