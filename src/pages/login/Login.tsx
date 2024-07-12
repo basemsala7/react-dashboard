@@ -18,7 +18,7 @@ const Login = () => {
       setLoading(true);
 
       const res = await fetch(
-        "https://crazy-flannel-nightgown-ant.cyclic.app/api/login",
+        "https://dashboard-backend-orpin.vercel.app/api/login",
         {
           method: "POST",
           headers: {

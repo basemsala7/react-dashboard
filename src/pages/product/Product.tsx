@@ -13,7 +13,7 @@ const Product = () => {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        `https://crazy-flannel-nightgown-ant.cyclic.app/api/products`,
+        `https://dashboard-backend-orpin.vercel.app/api/products`,
         {}
       );
       if (!response.ok) throw Error();
@@ -32,7 +32,7 @@ const Product = () => {
   const deleteProduct = async (id: number) => {
     try {
       const res = await fetch(
-        `https://crazy-flannel-nightgown-ant.cyclic.app/api/products/${id}`,
+        `https://dashboard-backend-orpin.vercel.app/api/products/${id}`,
         {
           method: "DELETE",
         }

@@ -48,7 +48,7 @@ const Users = () => {
     const fetchUser = async () => {
       try {
         const response = await fetch(
-          `https://crazy-flannel-nightgown-ant.cyclic.app/api/users`,
+          `https://dashboard-backend-orpin.vercel.app/api/users`,
           {}
         );
         if (!response.ok) throw Error();

@@ -16,7 +16,7 @@ const SingleUser = () => {
     const fetchUser = async () => {
       try {
         const response = await fetch(
-          `https://crazy-flannel-nightgown-ant.cyclic.app/api/users/${id}`,
+          `https://dashboard-backend-orpin.vercel.app/api/users/${id}`,
           {}
         );
         if (!response.ok) throw Error();

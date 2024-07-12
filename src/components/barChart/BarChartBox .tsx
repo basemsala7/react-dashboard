@@ -7,7 +7,7 @@ const BarChartBox = ({ slug }: { slug: string }) => {
   const fetchBarChartData = async (slug: string) => {
     try {
       const res = await fetch(
-        `https://crazy-flannel-nightgown-ant.cyclic.app/api/dashboard/${slug}`
+        `https://dashboard-backend-orpin.vercel.app/api/dashboard/${slug}`
       );
       if (!res.ok) throw Error();
       return await res.json();

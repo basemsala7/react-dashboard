@@ -7,7 +7,7 @@ const PieChartBox = () => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        `https://crazy-flannel-nightgown-ant.cyclic.app/api/dashboard/devices`
+        `https://dashboard-backend-orpin.vercel.app/api/dashboard/devices`
       );
       if (!res.ok) throw Error();
       return await res.json();

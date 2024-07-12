@@ -5,7 +5,7 @@ const TopDeals = () => {
   const getData = async () => {
     try {
       const res = await fetch(
-        "https://crazy-flannel-nightgown-ant.cyclic.app/api/dashboard/topdeals"
+        "https://dashboard-backend-orpin.vercel.app/api/dashboard/topdeals"
       );
       if (!res.ok) throw Error("some thing is worng");
       return await res.json();
